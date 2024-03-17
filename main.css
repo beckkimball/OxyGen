@@ -1,5 +1,5 @@
 body {
-    background-image: url("download.jpg");
+    background-color: lightgreen;
     background-size: 90%;
 }
 
@@ -32,8 +32,14 @@ button{
     font-size: 18px;
 }
 
+
+
 #chop {
     background-color:transparent;
     border-color: transparent;
     padding-top: 70px;
+}
+
+#chop :active {
+    transform: scale(1.1);
 }
