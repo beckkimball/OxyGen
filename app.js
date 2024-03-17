@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var logs = 0;
+    var oxygen = 0;
     var stone = 0;
     var pickaxes = 0;
     var money = 0;
@@ -12,13 +12,13 @@ $(document).ready(function(){
     var menu;
 
     setInterval(function(){
-        logs += autoLogPlus;
+        oxygen += autoLogPlus;
         changeInventory();
         changeMarket();
     }, 1000);
 
     $("#chop").click(function(){
-        logs += logPlus;
+        oxygen += logPlus;
         changeInventory();
         changeMarket();
     });
@@ -33,22 +33,22 @@ $(document).ready(function(){
     });
 
     $("#sell1").click(function(){
-        logs--;
+        oxygen--;
         money += logPrice;
         changeInventory();
         changeMarket();
     });
 
     $("#sell10").click(function(){
-        logs-=10;
+        oxygen-=10;
         money += logPrice * 10;
         changeInventory();
         changeMarket();
     });
 
     $("#sellAll").click(function(){
-        money += logPrice * logs;
-        logs = 0;
+        money += logPrice * oxygen;
+        oxygen = 0;
         changeInventory();
         changeMarket();
     });
@@ -81,10 +81,10 @@ $(document).ready(function(){
     function changeInventory(){
         $("#money").html("Money: $" + money);
 
-        if(logs == 1){
-            $("#logs").html(logs + " Oxygen");
+        if(oxygen == 1){
+            $("#oxygen").html("Oxygen Level: " + oxygen);
         }else{
-            $("#logs").html(logs + " Oxygen");
+            $("#oxygen").html("Oxygen Level: " + oxygen);
         }
 
         if(stone > 0){
@@ -101,17 +101,17 @@ $(document).ready(function(){
     }
 
     function changeMarket(){
-        if(logs > 0){
+        if(oxygen > 0){
             $("#sellAll").css("display", "block");
         }else{
             $("#sellAll").css("display", "none");
         }
-        if(logs >= 1){
+        if(oxygen >= 1){
             $("#sell1").css("display", "block");
         }else{
             $("#sell1").css("display", "none");
         }
-        if(logs >= 10){
+        if(oxygen >= 10){
             $("#sell10").css("display", "block");
         }else{
             $("#sell10").css("display", "none");
