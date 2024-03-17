@@ -44,3 +44,13 @@ button{
 #chop :active {
     transform: scale(1.1);
 }
+
+
+.tree {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding-left: 33%;
+  }
