@@ -4,10 +4,11 @@ body {
 }
 
 .inventory{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: white;
+    display:block;
+    margin:auto;
+    width: 20%;
+    text-align:center;
+    background-color: rgb(99, 182, 97);
 }
 
 .marketplace{
