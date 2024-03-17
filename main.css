@@ -1,0 +1,39 @@
+body {
+    background-image: url("download.jpg");
+    background-size: 90%;
+}
+
+.inventory{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.marketplace{
+    display: none;
+}
+
+
+.sellButtons{
+    display: grid;
+    grid-template-columns: repeat(3, 72px);
+    margin-bottom: 10px;
+}
+
+.upgrades, .items button{
+    display: grid;
+    grid-template-columns: repeat(1, 96px);
+    margin-bottom: 10px;
+}
+
+button{
+    background-color: white;
+    font-size: 18px;
+}
+
+#chop {
+    background-color:transparent;
+    border-color: transparent;
+    padding-top: 70px;
+}
