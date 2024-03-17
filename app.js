@@ -82,9 +82,9 @@ $(document).ready(function(){
         $("#money").html("Money: $" + money);
 
         if(logs == 1){
-            $("#logs").html("You now own " + logs + " log.");
+            $("#logs").html(logs + " Oxygen");
         }else{
-            $("#logs").html("You now own " + logs + " logs.");
+            $("#logs").html(logs + " Oxygen");
         }
 
         if(stone > 0){
