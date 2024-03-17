@@ -82,10 +82,7 @@ $(document).ready(function(){
         $("#money").html("Money: $" + money);
 
         if(logs == 1){
-            $("#logs").html("You now own " + logs + " log.");
-        }else{
-            $("#logs").html("You now own " + logs + " logs.");
-        }
+            $("#logs").html(logs + " oxygen");
 
         if(stone > 0){
             $("#stone").html("You now own " + stone + " piece(s) of stone.");
