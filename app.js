@@ -49,7 +49,6 @@ $(document).ready(function(){
                 var img = document.getElementById('defaultimg');
                 img.src = '3.png';
                 logPlus = 20;
-                oxygenNeeded = 20000;
             }
             
         }
