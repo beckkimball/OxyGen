@@ -36,6 +36,17 @@ $(document).ready(function(){
             oxygen-=oxygenNeeded;
             oxygenNeeded+=10
             treeLevel+=logPlus;
+            if (treeLevel == 2) {
+                var img = document.getElementById('defaultimg');
+                img.src = '1.png';
+            } else if (treeLevel == 3) {
+                var img = document.getElementById('defaultimg');
+                img.src = '2.png';
+            } else if (treeLevel == 4) {
+                var img = document.getElementById('defaultimg');
+                img.src = '3.png';
+            }
+            
         }
         changeInventory();
         changeMarket();
