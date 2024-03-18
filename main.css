@@ -15,35 +15,46 @@ body {
 
 .marketplace{
     display: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+}
+
+.upgrades, .sellButtons, .return {
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
 }
 
 
-.sellButtons{
-    display: grid;
-    grid-template-columns: repeat(3, 72px);
-    margin-bottom: 10px;
-}
-
-.upgrades, .items button{
-    display: grid;
-    grid-template-columns: repeat(1, 96px);
-    margin-bottom: 10px;
-}
 
 button{
     background-color: rgb(167, 222, 227);
-    font-size: 18px;
+    font-family: "Courier New", monospace;
+    font-size: 25px;
+    font-style: bold;
+    box-shadow: 0 9px #999;
 }
 
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 
-#chop {
+
+#click {
     background-color:transparent;
     border-color: transparent;
     padding-top: 70px;
 }
 
-#chop :active {
+#click :active {
     transform: scale(1.1);
 }
 
