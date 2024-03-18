@@ -64,7 +64,7 @@ $(document).ready(function(){
             oxygen -= autoClickerPrice;
             autoLogPlus++;
             autoClickerNumbers ++;
-            autoClickerPrice *= 1.5;
+            autoClickerPrice = Math.floor(autoClickerPrice*= 1.2);
         }
 
         changeInventory();
