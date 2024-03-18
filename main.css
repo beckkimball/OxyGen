@@ -63,3 +63,14 @@ button:active {
     display:block;
     margin:auto;
   }
+
+h1 {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: "Courier New", monospace;
+    font-size: 50px;
+    color: rgb(28, 40, 8);
+    padding-bottom: 20px;
+    padding-top: 5px;
+}

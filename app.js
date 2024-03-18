@@ -2,10 +2,11 @@ $(document).ready(function(){
     var oxygen = 0;
     var fruit = 0;
     var treeLevel = 1;
-    var oxygenNeeded = 10;
+    var oxygenNeeded = 80;
     var logPlus = 1;
     var autoLogPlus = 0;
     var autoClickerPrice = 100;
+    var autoClickerNumbers = 0
     var menu;
 
     setInterval(function(){
@@ -28,19 +29,27 @@ $(document).ready(function(){
     $("#Upgrade").click(function(){
         if (oxygen < oxygenNeeded) {
             alert("You don't have enough Oxygen!");
+        } else if (treeLevel>4){
+            alert("Maximum number of Tree Levels Reached!!!")
         } else {
             oxygen-=oxygenNeeded;
-            oxygenNeeded+=10
-            treeLevel+=logPlus;
+            oxygenNeeded = 80
+            treeLevel++;
             if (treeLevel == 2) {
                 var img = document.getElementById('defaultimg');
                 img.src = '1.png';
+                logPlus = 3;
+                oxygenNeeded = 720;
             } else if (treeLevel == 3) {
                 var img = document.getElementById('defaultimg');
                 img.src = '2.png';
+                logPlus= 10;
+                oxygenNeeded = 4000;
             } else if (treeLevel == 4) {
                 var img = document.getElementById('defaultimg');
                 img.src = '3.png';
+                logPlus = 20;
+                oxygenNeeded = 20000;
             }
             
         }
@@ -54,7 +63,10 @@ $(document).ready(function(){
         } else {
             oxygen -= autoClickerPrice;
             autoLogPlus++;
+            autoClickerNumbers ++;
+            autoClickerPrice *= 1.5;
         }
+
         changeInventory();
         changeMarket();
     });
@@ -77,6 +89,24 @@ $(document).ready(function(){
             $("#oxygen").html("Oxygen Level: " + oxygen);
         }else{
             $("#oxygen").html("Oxygen Level: " + oxygen);
+        }
+
+        if(oxygenNeeded == 1){
+            $("#Upgrade").html("Upgrade Tree [" + oxygenNeeded + "]");
+        }else{
+            $("#Upgrade").html("Upgrade Tree [" + oxygenNeeded + "]");
+        }
+
+        if(autoClickerPrice == 1){
+            $("#autoClicker").html("Buy [1] Auto Clicker [" + autoClickerPrice + "]");
+        }else{
+            $("#autoClicker").html("Buy [1] Auto Clicker [" + autoClickerPrice + "]");
+        }
+
+        if(autoClickerNumbers == 1){
+            $("#autoclickerNumber").html("Auto Clicker Purchased:" + autoClickerNumbers);
+        }else{
+            $("#autoclickerNumber").html("Auto Clicker Purchased:" + autoClickerNumbers);
         }
 
 
