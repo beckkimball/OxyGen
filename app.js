@@ -1,6 +1,8 @@
 $(document).ready(function(){
     var oxygen = 0;
     var fruit = 0;
+    var treeLevel = 1;
+    var oxygenNeeded = 10;
     var pickaxes = 0;
     var money = 0;
     var logPlus = 1;
@@ -27,9 +29,14 @@ $(document).ready(function(){
         changeMarket();
     });
 
-    $("#sell1").click(function(){
-        oxygen--;
-        money += logPrice;
+    $("#Upgrade").click(function(){
+        if (oxygen < oxygenNeeded) {
+            alert("You don't have enough Oxygen!");
+        } else {
+            oxygen-=oxygenNeeded;
+            oxygenNeeded+=10
+            treeLevel+=logPlus;
+        }
         changeInventory();
         changeMarket();
     });
@@ -86,6 +93,12 @@ $(document).ready(function(){
             $("#fruit").html("Fruits Collected: " + fruit);
         }else{
             $("#fruit").html("Fruits Collected: " + fruit);
+        }
+
+        if(treeLevel == 1){
+            $("#treelevel").html("Tree Level: " + treeLevel);
+        }else{
+            $("#treelevel").html("Tree Level: " + treeLevel);
         }
 
         if(pickaxes > 0){
