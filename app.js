@@ -104,9 +104,9 @@ $(document).ready(function(){
         }
 
         if(autoClickerNumbers == 1){
-            $("#autoclickerNumber").html("Auto Clicker Purchased:" + autoClickerNumbers);
+            $("#autoclickerNumber").html("Auto Clicker Purchased: " + autoClickerNumbers);
         }else{
-            $("#autoclickerNumber").html("Auto Clicker Purchased:" + autoClickerNumbers);
+            $("#autoclickerNumber").html("Auto Clicker Purchased: " + autoClickerNumbers);
         }
 
 
